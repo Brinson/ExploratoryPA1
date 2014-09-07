@@ -27,6 +27,7 @@ Plot 1
 
 
 ```r
+par(bg="white")
 options(scipen=999)
 hist(powersubset$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power")
 ```
@@ -46,6 +47,7 @@ Plot 2
 
 
 ```r
+par(bg="white")
 with(powersubset,plot(datetime,Global_active_power,type="l",col="black",ylab="Global Active Power (kilowatts)"))
 ```
 
@@ -64,6 +66,7 @@ Plot 3
 
 
 ```r
+par(bg="white")
 with(powersubset,plot(datetime,Sub_metering_1,type="l",col="black",xlab="",ylab="Energy sub metering"))
 with(powersubset,lines(datetime,Sub_metering_2,type="l",col="red"))
 with(powersubset,lines(datetime,Sub_metering_3,type="l",col="blue"))
@@ -87,6 +90,7 @@ Plot 4
 
 
 ```r
+par(bg="white")
 par(mfcol=c(2,2))
 with(powersubset,plot(datetime,Global_active_power,type="l",col="black",ylab="Global Active Power (kilowatts)"))
 with(powersubset,plot(datetime,Sub_metering_1,type="l",col="black",xlab="",ylab="Energy sub metering"))

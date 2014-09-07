@@ -11,5 +11,6 @@ powersubset$Time2 <- strptime(powersubset$Time,format="%H:%M:%S")
 powersubset$datetime <-  paste(powersubset$Date, powersubset$Time)
 powersubset$datetime <-  strptime(powersubset$datetime, "%d/%m/%Y %H:%M:%S") 
 
+par(bg="white")
 with(powersubset,plot(datetime,Global_active_power,type="l",col="black",ylab="Global Active Power (kilowatts)"))
 dev.copy(png, file = "./plots/plot2.png" ,width = 480, height = 480) 

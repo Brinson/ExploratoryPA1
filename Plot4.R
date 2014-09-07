@@ -11,6 +11,7 @@ powersubset$Time2 <- strptime(powersubset$Time,format="%H:%M:%S")
 powersubset$datetime <-  paste(powersubset$Date, powersubset$Time)
 powersubset$datetime <-  strptime(powersubset$datetime, "%d/%m/%Y %H:%M:%S") 
 
+par(bg="white")
 par(mfcol=c(2,2))
 with(powersubset,plot(datetime,Global_active_power,type="l",col="black",ylab="Global Active Power (kilowatts)"))
 with(powersubset,plot(datetime,Sub_metering_1,type="l",col="black",xlab="",ylab="Energy sub metering"))

@@ -11,6 +11,7 @@ powersubset$Time2 <- strptime(powersubset$Time,format="%H:%M:%S")
 powersubset$datetime <-  paste(powersubset$Date, powersubset$Time)
 powersubset$datetime <-  strptime(powersubset$datetime, "%d/%m/%Y %H:%M:%S") 
 
+par(bg="white")
 options(scipen=999)
 hist(powersubset$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power")
 dev.copy(png, file = "plot1.png" ,width = 480, height = 480) 

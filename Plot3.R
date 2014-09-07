@@ -11,6 +11,7 @@ powersubset$Time2 <- strptime(powersubset$Time,format="%H:%M:%S")
 powersubset$datetime <-  paste(powersubset$Date, powersubset$Time)
 powersubset$datetime <-  strptime(powersubset$datetime, "%d/%m/%Y %H:%M:%S") 
 
+par(bg="white")
 with(powersubset,plot(datetime,Sub_metering_1,type="l",col="black",xlab="",ylab="Energy sub metering"))
 with(powersubset,lines(datetime,Sub_metering_2,type="l",col="red"))
 with(powersubset,lines(datetime,Sub_metering_3,type="l",col="blue"))
